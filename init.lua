@@ -3,14 +3,17 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
--- Set to true if you have a Nerd Font installed and selected in the terminal
-vim.g.have_nerd_font = true
+if vim.g.vscode then
+  require 'custom/vscode-keymaps'
+else
+  -- Set to true if you have a Nerd Font installed and selected in the terminal
+  vim.g.have_nerd_font = true
 
--- [[ Setting options ]]
-require 'options'
+  -- [[ Setting options ]]
+  require 'options'
 
--- [[ Basic Keymaps ]]
-require 'keymaps'
+  require 'keymaps'
+end
 
 -- [[ Install `lazy.nvim` plugin manager ]]
 require 'lazy-bootstrap'
