@@ -30,3 +30,6 @@ keymap({ 'n', 'v' }, '<leader>d', "<cmd>lua require('vscode').action('editor.act
 keymap({ 'n', 'v' }, '<leader>gr', "<cmd>lua require('vscode').action('editor.action.goToReferences')<CR>")
 keymap({ 'n', 'v' }, '<leader>gI', "<cmd>lua require('vscode').action('editor.action.goToImplementation')<CR>")
 keymap({ 'n', 'v' }, '<leader>rn', "<cmd>lua require('vscode').action('editor.action.rename')<CR>")
+
+keymap({ 'n', 'v' }, 'gmn', "<cmd>lua require('vscode').action('gotoNextPreviousMember.nextMember')<CR>")
+keymap({ 'n', 'v' }, 'gmp', "<cmd>lua require('vscode').action('gotoNextPreviousMember.previousMember')<CR>")
