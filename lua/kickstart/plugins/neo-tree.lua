@@ -11,7 +11,7 @@ return {
   },
   lazy = false,
   keys = {
-    { '\\', ':Neotree reveal<CR>', desc = 'NeoTree reveal', silent = true },
+    { '\\', ':Neotree reveal float<CR>', desc = 'NeoTree reveal float', silent = true },
   },
   opts = {
     filesystem = {
@@ -19,6 +19,18 @@ return {
         mappings = {
           ['\\'] = 'close_window',
         },
+      },
+      filtered_items = {
+        visible = true,
+        hide_dotfiles = false,
+        use_libuv_file_watcher = true,
+      },
+      sources = {
+        winbar = true,
+        content_layout = 'center',
+        { source = 'filesystem', display_name = ' 󰈔 File' },
+        { source = 'buffers', display_name = '  Bufs' },
+        { source = 'git_status', display_name = '  Git' },
       },
     },
   },
